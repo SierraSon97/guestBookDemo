@@ -5,7 +5,7 @@
     <th:block th:fragment="content">
 
         <h1 class="mt-4">GuestBook Modify Page</h1>
-        <form action="/guestbook/modify" method="post">
+        <form th:action="@{/guestBook/modify}" method="post">
 
             <!--페이지 번호  -->
             <input type="hidden" name="page" th:value="${requestDto.page}">
@@ -41,7 +41,9 @@
         </form>
 
         <button type="button" class="btn btn-primary modifyBtn">Modify</button>
+
         <button type="button" class="btn btn-info listBtn">List</button>
+
         <button type="button" class="btn btn-danger removeBtn">Remove</button>
 
         <script th:inline="javascript">
