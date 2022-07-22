@@ -31,4 +31,11 @@ public interface GuestBookService {
                 .build();
         return dto;
     }
+
+    GuestBookDto read(Long gno);
+
+    void remove(Long gno);
+
+    void modify(GuestBookDto dto);
+
 }
