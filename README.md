@@ -21,10 +21,10 @@ Part2 : 방명록 프로젝트
 
 - 구현사항
     - 기본적인 CRUD
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c87e8bf5-129c-479e-b055-dc51109a1708/Untitled.png)  
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d2ed61d7-8e5c-479e-8268-bf4e90abb7a6/Untitled.png)  
+    <img width="799" alt="image" src="https://user-images.githubusercontent.com/36991763/180693437-673b7977-3791-42cf-b068-b220d9391736.png">
+    <img width="533" alt="image" src="https://user-images.githubusercontent.com/36991763/180693319-bbd24d99-a66d-4eec-be2e-bcca857307eb.png">
     - 검색 기능
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0f108c55-b7ef-49a4-9227-b7ca0bcaef30/Untitled.png)  
+    <img width="647" alt="image" src="https://user-images.githubusercontent.com/36991763/180693456-604aef16-ef21-4738-900d-a08b025754e1.png">
 
 - 기술스택
     - Spring boot
