@@ -27,8 +27,8 @@
                 </div>
                 <input class="form-control" name="keyword" th:value="${pageRequestDto.keyword}">
                 <div class="input-group-append" id="button-addon4">
-                    <button class="btn btn-outline-secondary searchBtn" type="button">Search</button>
-                    <button class="btn btn-outline-secondary clearBtn" type="button">Clear</button>
+                    <button class="btn btn-outline-secondary btn-search" type="button">Search</button>
+                    <button class="btn btn-outline-secondary btn-clear" type="button">Clear</button>
                 </div>
             </div>
         </form>
@@ -105,6 +105,10 @@
         <script th:inline="javascript">
             var msg = [[${msg}]];
             console.log(msg);
+
+            if(msg){
+                $(".modal").modal();
+            }
 
             var searchForm = $("#searchForm");
             $('.btn-search').click(function(e){
