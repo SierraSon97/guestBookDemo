@@ -21,11 +21,14 @@ public class guestBookController {
 
     private final GuestBookService guestBookService;
 
+    @GetMapping("/")
+    public String index() {
+        return "redirect:/guestbook/list";
+    }
     @GetMapping("/main")
-    public String gusetBookMain(PageRequestDto pageRequestDto, Model model){
-        log.info("mainMenu-----------");
+    public void gusetBookMain(PageRequestDto pageRequestDto, Model model){
+        log.info("mainMenu-----------" + pageRequestDto);
         model.addAttribute("result", guestBookService.getList(pageRequestDto));
-        return "guestBook/main";
     }
 
     @GetMapping("/register")
