@@ -2,27 +2,19 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <th:block th:replace="~{/layout/baseLayout :: setContent(~{this::content} )}">
     <th:block th:fragment="content">
-        <h1 class="mt-4">GuestBook List Page
-            <span>
-                <a th:href="@{/guestBook/register}">
-                    <button type="button" class="btn btn-outline-primary">
-                        REGISTER
-                    </button>
-                </a>
-            </span>
-        </h1>
+        <h1 class="mt-4">GuestBook List Page</h1>
 
         <form action="/guestBook/main" method="get" id="searchForm">
             <div class="input-group">
                 <input type="hidden" name="page" value = "1">
-                <div class="input-group-prepend">
-                    <select class="custom-select" name="type">
+                <div class="input-group-append">
+                    <select class="form-select-lg" name="type">
                         <option th:selected="${pageRequestDto.type == null}">-------</option>
-                        <option value="t" th:selected="${pageRequestDto.type == 't'}" >제목</option>
-                        <option value="c" th:selected="${pageRequestDto.type == 'c'}"  >내용</option>
-                        <option value="w"  th:selected="${pageRequestDto.type == 'w'}" >작성자</option>
-                        <option value="tc"  th:selected="${pageRequestDto.type == 'tc'}" >제목 + 내용</option>
-                        <option value="tcw"  th:selected="${pageRequestDto.type == 'tcw'}" >제목 + 내용 + 작성자</option>
+                        <option value="t" th:selected="${pageRequestDto.type =='t'}" >제목</option>
+                        <option value="c" th:selected="${pageRequestDto.type =='c'}"  >내용</option>
+                        <option value="w"  th:selected="${pageRequestDto.type =='w'}" >작성자</option>
+                        <option value="tc"  th:selected="${pageRequestDto.type =='tc'}" >제목 + 내용</option>
+                        <option value="tcw"  th:selected="${pageRequestDto.type =='tcw'}" >제목 + 내용 + 작성자</option>
                     </select>
                 </div>
                 <input class="form-control" name="keyword" th:value="${pageRequestDto.keyword}">
@@ -58,6 +50,15 @@
             </tbody>
 
         </table>
+
+        <span>
+            <a th:href="@{/guestBook/register}">
+                <button type="button" class="btn btn-outline-primary">
+                    REGISTER
+                </button>
+            </a>
+        </span>
+
         <ul class="pagination h-100 justify-content-center align-items-center">
             <li class="page-item " th:if="${result.prev}">
                 <a class="page-link" th:href="@{/guestBook/main(page= ${result.start - 1},
